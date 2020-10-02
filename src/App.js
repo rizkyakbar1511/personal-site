@@ -1,26 +1,51 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "./components/Header";
+import About from "./components/About";
+import Services from "./components/Services";
+import Skills from "./components/Skills";
+import Project from "./components/Projects/Project";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import { Fab, Grow } from "@material-ui/core";
+import { ExpandLess } from "@material-ui/icons";
+import { makeStyles } from "@material-ui/core/styles";
+import { useScroll } from "./assets/hooks";
 
 function App() {
+  const classes = useStyles();
+  const [visible, scrollToTop] = useScroll();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <Header scroll={scrollToTop} />
+      <About />
+      <Services />
+      <Skills />
+      <Project />
+      <Contact />
+      <Footer />
+      <Grow in={visible}>
+        <Fab
+          onClick={scrollToTop}
+          className={classes.fab}
+          aria-label="scroll-to-top"
         >
-          Learn React
-        </a>
-      </header>
+          <ExpandLess fontSize="large" />
+        </Fab>
+      </Grow>
     </div>
   );
 }
+
+const useStyles = makeStyles((theme) => ({
+  fab: {
+    position: "fixed",
+    bottom: theme.spacing(2),
+    right: theme.spacing(2),
+    backgroundColor: "#1d30db",
+    color: "#fff",
+    zIndex: 99,
+  },
+}));
 
 export default App;
