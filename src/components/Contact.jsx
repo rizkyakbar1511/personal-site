@@ -185,7 +185,7 @@ export default function Contact() {
               <Grid item xs={12} md={12}>
                 <Button
                   type="submit"
-                  style={{ background: "#1d30db", color: "#f2f2f2" }}
+                  className={classes._btnSendMessage}
                   disabled={sending ? true : false}
                 >
                   Send Message
@@ -285,5 +285,14 @@ const useStyles = makeStyles({
     marginRight: 16,
     fontSize: "1.8rem",
     color: "#1d30db",
+  },
+  _btnSendMessage: {
+    background: "#1d30db",
+    color: "#f2f2f2",
+    "&:hover": {
+      background: "none",
+      color: "#1d30db",
+      border: "1px solid #1d30db",
+    },
   },
 });

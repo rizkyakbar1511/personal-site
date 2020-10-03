@@ -58,7 +58,7 @@ export default function About() {
             GraphQL, React, Express Framework.
           </Typography>
           <Button
-            href="https://doc-08-a0-docs.googleusercontent.com/docs/securesc/37ic31ab1pes0vmls1aj5hj56i4kk7m6/7gaskj6tc6q4qmjg7csosbgmhiv68bbt/1600263000000/13527693567131775964/13527693567131775964/1tR9yOOalr0BkaOKnKdMFRPiA0Bvwta_r?e=download&authuser=0"
+            href="https://drive.google.com/file/d/1UcDSN0Zr1cpHuv9fZxpjv8P7ochr20J7/view?usp=sharing"
             className={classes.downloadBtn}
           >
             Download CV

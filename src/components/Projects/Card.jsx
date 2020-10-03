@@ -93,7 +93,7 @@ const useStyles = makeStyles((theme) => ({
     "&:hover > ul > li:nth-child(5) > a": {
       transitionDelay: "0.8s",
     },
-    "&:hover .makeStyles-imgBx-48": {
+    "&:hover div:first-of-type": {
       transform: `translateY(-${100}px)`,
     },
   },
